@@ -1,0 +1,10 @@
+package patternprograms;
+
+public class Finging_missing_element_in_an_array {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,168 @@
+package com.Caluclator;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Calucalator extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField tfa;
+	private JTextField tfb;
+	private JTextField tfr;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Calucalator frame = new Calucalator();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Calucalator() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(0, 255, 0));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel Heading = new JLabel("Calculator");
+		Heading.setFont(new Font("Tahoma", Font.BOLD, 18));
+		Heading.setBounds(178, 29, 94, 22);
+		contentPane.add(Heading);
+		
+		JLabel la = new JLabel("A");
+		la.setFont(new Font("Tahoma", Font.BOLD, 18));
+		la.setBounds(91, 73, 13, 22);
+		contentPane.add(la);
+		
+		tfa = new JTextField();
+		tfa.setBounds(148, 78, 96, 19);
+		contentPane.add(tfa);
+		tfa.setColumns(10);
+		
+		JLabel lb_2 = new JLabel("B");
+		lb_2.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lb_2.setBounds(91, 128, 13, 22);
+		contentPane.add(lb_2);
+		
+		tfb = new JTextField();
+		tfb.setColumns(10);
+		tfb.setBounds(148, 133, 96, 19);
+		contentPane.add(tfb);
+		
+		JButton btnAdd = new JButton("ADD");
+		btnAdd.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) 
+			{
+				String data1=tfa.getText();
+				String data2=tfb.getText();
+				int ref1=Integer.valueOf(data1);
+				int ref2=Integer.valueOf(data2);
+				int ref3=ref1+ref2;
+				String result=String.valueOf(ref3);
+				
+				
+			}
+		});
+		btnAdd.setBounds(25, 232, 51, 21);
+		contentPane.add(btnAdd);
+		
+		JButton btnsub1 = new JButton("SUB");
+		btnsub1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String data1=tfa.getText();
+				String data2=tfb.getText();
+				int ref1=Integer.valueOf(data1);
+				int ref2=Integer.valueOf(data2);
+				int ref3=ref1-ref2;
+				String result=String.valueOf(ref3);
+				
+			}
+		});
+		btnsub1.setBounds(108, 232, 51, 21);
+		contentPane.add(btnsub1);
+		
+		JButton btnMul = new JButton("MUL");
+		btnMul.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String data1=tfa.getText();
+				String data2=tfb.getText();
+				int ref1=Integer.valueOf(data1);
+				int ref2=Integer.valueOf(data2);
+				int ref3=ref1*ref2;
+				String result=String.valueOf(ref3);
+				
+			}
+		});
+		btnMul.setBounds(193, 232, 51, 21);
+		contentPane.add(btnMul);
+		
+		JButton btnDiv = new JButton("DIV");
+		btnDiv.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String data1=tfa.getText();
+				String data2=tfb.getText();
+				Float ref1=Float.valueOf(data1);
+				Float ref2=Float.valueOf(data2);
+				float ref3=ref1+ref2;
+				String result=String.valueOf(ref3);
+				
+			}
+		});
+		btnDiv.setBounds(269, 232, 51, 21);
+		contentPane.add(btnDiv);
+		
+		JButton btnMod = new JButton("MOD");
+		btnMod.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String data1=tfa.getText();
+				String data2=tfb.getText();
+				int ref1=Integer.valueOf(data1);
+				int ref2=Integer.valueOf(data2);
+				int ref3=ref1%ref2;
+				String result=String.valueOf(ref3);
+				
+			}
+		});
+		btnMod.setBounds(345, 232, 55, 21);
+		contentPane.add(btnMod);
+		
+		JLabel lblResult = new JLabel("Result");
+		lblResult.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lblResult.setBounds(44, 175, 60, 22);
+		contentPane.add(lblResult);
+		
+		tfr = new JTextField();
+		tfr.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		tfr.setBounds(148, 180, 96, 19);
+		contentPane.add(tfr);
+		tfr.setColumns(10);
+	}
+}

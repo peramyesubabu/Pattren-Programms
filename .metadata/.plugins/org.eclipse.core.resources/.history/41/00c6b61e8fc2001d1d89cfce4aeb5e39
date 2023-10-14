@@ -1,0 +1,10 @@
+package linea_rAnd_Binaray_searching;
+
+public class Insertion_sort_desending_order {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

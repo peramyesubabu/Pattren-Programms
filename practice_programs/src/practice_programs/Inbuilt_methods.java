@@ -1,0 +1,24 @@
+package practice_programs;
+
+public class Inbuilt_methods {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s="Siva Rama Krishna";
+		System.out.println(s.toUpperCase());
+		System.out.println("================");
+		System.out.println(s.toLowerCase());
+		System.out.println("================");
+		System.out.println(s.charAt(10));
+		System.out.println("================");
+		System.out.println(s.indexOf('v'));
+		System.out.println("==============s.c==");
+		System.out.println(s.contains("Siva"));
+		System.out.println("================");
+		System.out.println(s.substring(10));
+		System.out.println("================");
+		System.out.println(s.substring(10,15));
+
+	}
+
+}

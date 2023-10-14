@@ -1,0 +1,10 @@
+package patternprograms;
+
+public class Disply_array_elements_of_adding_elements {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

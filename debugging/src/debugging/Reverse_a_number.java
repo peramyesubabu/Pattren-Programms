@@ -1,0 +1,26 @@
+package debugging;
+
+import java.util.Scanner;
+
+public class Reverse_a_number {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter a number");
+		int num=scan.nextInt();
+		int digit;
+		int rev=0;
+		while(num!=0)
+		{
+			digit=num%10;
+			rev=rev*10+digit;
+			num=num/10;
+		}
+		System.out.println("Reverse number");
+		System.out.println(rev);
+	}
+
+	}
+
+

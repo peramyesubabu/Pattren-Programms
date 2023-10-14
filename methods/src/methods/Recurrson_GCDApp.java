@@ -1,0 +1,19 @@
+package methods;
+
+import java.util.Scanner;
+
+public class Recurrson_GCDApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner scan =new Scanner(System.in);
+System.out.println("Enter two numbers");
+int m=scan.nextInt();
+int n=scan.nextInt();
+Recurrson  gcd=new Recurrson ();
+int ref=gcd.Greatestcommondisior(m,n);
+System.out.println("Gcd of two numbers"+m+"and"+n+"is"+ref);
+
+	}
+
+}
